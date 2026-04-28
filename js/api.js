@@ -13,9 +13,11 @@ export async function resolverDudas(historial) {
             })
         })
         const datos = await respuesta.json()
+        console.log(datos)
         return datos.content[0].text
         
     } catch (error) {
+        console.log('Error:', error)
         return null
     }
     
